@@ -1,4 +1,4 @@
-package com.diogovenancio.jlox;
+package src;
 
 enum TokenType {
   // Single-character tokens

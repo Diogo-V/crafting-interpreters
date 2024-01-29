@@ -1,11 +1,14 @@
-package com.diogovenancio.jlox;
+package src;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.diogovenancio.jlox.TokenType.*;
+import static src.TokenType.*;
+import src.Token;
+import src.Lox;
+
 
 class Scanner {
   private final String source;  // Stores the raw source code as a string

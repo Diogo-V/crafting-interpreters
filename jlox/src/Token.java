@@ -1,4 +1,7 @@
-package com.diogovenancio.jlox;
+package src;
+
+import src.TokenType;
+
 
 class Token {
   final TokenType type;
