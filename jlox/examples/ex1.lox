@@ -1,1 +1,11 @@
 print "Hello World"
+
+/* This is a comment */
+
+/* This is another
+comment */
+
+var name = "diogo"
+var age = 18
+
+print 18 + 2

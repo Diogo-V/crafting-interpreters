@@ -85,6 +85,23 @@ class Scanner {
       case '/':
         if (match('/')) {  // If we find a comment, we ignore everything until the end of the line
           while (peek() != '\n' && !isAtEnd()) advance();
+        } else if (match('*')) {
+
+          // Multiline comment
+          while (peek() != '*' && peekNext() != '/' && !isAtEnd()) {
+            if (peek() == '\n') line++;
+            advance();
+          }
+          
+          // Unterminated comment
+          if (isAtEnd()) {
+            Lox.error(line, "Unterminated comment.");
+            return;
+          }
+
+          // The closing */
+          advance();
+          advance();
         } else {
           addToken(SLASH);
         }

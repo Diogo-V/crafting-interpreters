@@ -31,3 +31,5 @@ The principal of *maximal munch* is when two lexical grammar rules can both matc
 To handle that case, we should capture it as an identifier and only then, can we try to compare it against all known keywords of the language.
 
 If it matches as one of the reserved keywords, we have to "promote" it to a specific token type of the reserved keyword that was matched.
+
+A quick note on ";": most people nowadays prefer languages that do not have those but they were pretty useful to delimite end of lines. When not using them, we have to carefully consider what is a significant "\n" and what is not relevant
